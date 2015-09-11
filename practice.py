@@ -12,8 +12,8 @@ import tweepy
 
 access_token = "1177228129-MjmHpmpOqXvLwdWvBdXJ09xqAIBIM8ecWCrdxO4"
 access_token_secret = "vdTOEsKEGIOnAcSadokDLuDQgTEXIU1eUYe6iMjegE9CB"
-consumer_key = "wVXKdim8jR98ateOyFmaPuhQw"
-consumer_secret = "7XCUIhY8gqSZxWeL0rcfAXH7AHvzCA6YYehHQ8BoWHwV5PfLwA"
+consumer_key = "OffKgwzpLV4gdTX8uo6YMEteo"
+consumer_secret = "N8MBsa8oVMLC29onaN4LVBz08FK2zynHzh1861o0uMp1CpqUmT"
 
 r = praw.Reddit('Test Program to Read Headlines')
 
@@ -52,7 +52,7 @@ def post_to_twitter(text_to_send):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
-    result = api.update_status(text_to_send)
+    result = api.update_status(status = text_to_send)
     return result
    # public_tweets = api.home_timeline()
 #
@@ -79,16 +79,13 @@ while True:
             print(shortlink)
             #what to send to twitter:
             texttosend = trunticateTwitterString(title, shortlink)
-            if textosend is False:
+            if texttosend is False:
                 print("too long of a post")
             else:
                 post_to_twitter(texttosend)
                 print("SUCCESSFUL POST")
-            
-            
         else:
            print('repeated submission')
-        post_to_twitter("hello world")
         time.sleep(10)
         
             
