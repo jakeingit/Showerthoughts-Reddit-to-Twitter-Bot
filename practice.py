@@ -86,7 +86,7 @@ while True:
                 print("SUCCESSFUL POST")
         else:
            print('repeated submission')
-        time.sleep(10)
+        time.sleep(60*30)
         
             
 
