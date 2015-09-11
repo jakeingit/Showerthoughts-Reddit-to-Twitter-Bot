@@ -5,6 +5,7 @@
 
 #try the redditbot here
 
+import random
 import time
 import praw
 import requests
@@ -18,6 +19,9 @@ consumer_secret = "N8MBsa8oVMLC29onaN4LVBz08FK2zynHzh1861o0uMp1CpqUmT"
 r = praw.Reddit('Test Program to Read Headlines')
 
 r.login('jakeinmn', '638743', disable_warning=True)
+
+def randomTimes(averagesecondsbetweencalls):
+    return random.gauss(averagesecondsbetweencalls, 60*3)
 
 def add_id_to_file(theID):
     with open('posted_posts.txt', 'a') as file:
@@ -86,7 +90,7 @@ while True:
                 print("SUCCESSFUL POST")
         else:
            print('repeated submission')
-        time.sleep(60*30)
+        time.sleep(randomTimes(60*30))
         
             
 
