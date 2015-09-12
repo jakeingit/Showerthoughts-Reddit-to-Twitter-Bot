@@ -16,12 +16,12 @@ access_token_secret = "vdTOEsKEGIOnAcSadokDLuDQgTEXIU1eUYe6iMjegE9CB"
 consumer_key = "OffKgwzpLV4gdTX8uo6YMEteo"
 consumer_secret = "N8MBsa8oVMLC29onaN4LVBz08FK2zynHzh1861o0uMp1CpqUmT"
 
-r = praw.Reddit('Test Program to Read Headlines')
+r = praw.Reddit('Showerthoughts to Twitter Script created by user jakeinmn')
 
 r.login('jakeinmn', '638743', disable_warning=True)
 
 def randomTimes(averagesecondsbetweencalls):
-    return random.gauss(averagesecondsbetweencalls, 60*3)
+    return random.gauss(averagesecondsbetweencalls, 60*4)
 
 def add_id_to_file(theID):
     with open('posted_posts.txt', 'a') as file:
@@ -69,7 +69,7 @@ def post_to_twitter(text_to_send):
                           
 while True:
     subreddit = r.get_subreddit('showerthoughts')
-    for submisssion in subreddit.get_top_from_day(limit=10):
+    for submisssion in subreddit.get_top_from_day(limit=24):
         shortlink = submisssion.short_link
         the_id = submisssion.id
         title = submisssion.title
