@@ -11,10 +11,10 @@ import praw
 import requests
 import tweepy
 
-access_token = "1177228129-MjmHpmpOqXvLwdWvBdXJ09xqAIBIM8ecWCrdxO4"
-access_token_secret = "vdTOEsKEGIOnAcSadokDLuDQgTEXIU1eUYe6iMjegE9CB"
-consumer_key = "OffKgwzpLV4gdTX8uo6YMEteo"
-consumer_secret = "N8MBsa8oVMLC29onaN4LVBz08FK2zynHzh1861o0uMp1CpqUmT"
+access_token = "xxx-xxx"
+access_token_secret = "xxx"
+consumer_key = "xxx"
+consumer_secret = "xxx"
 
 r = praw.Reddit('Showerthoughts to Twitter Script created by user jakeinmn')
 

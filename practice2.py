@@ -11,10 +11,10 @@ def randomTimes(averagesecondsbetweencalls):
 #check all of followers
 #if they have a star or a retweet, also retweet and/or star
 
-access_token = "1177228129-b5TiIHYD9KlAHNKezwSTm55aWcJpjJSTkzWIrr7"
-access_token_secret = "NN8MpxPlFIJiq2ve60rhxdVkix8gWwCtSNdxhHx6Vh8Nc"
-consumer_key = "QJfjc4n7I8mheKuHhaCLY7PyD"
-consumer_secret = "G1mKQSbVaFm55YSImGDnx2VFBwL7hkWpWmW8NYpGtl9d7iJoPe"
+access_token = "xxx"
+access_token_secret = "xxx"
+consumer_key = "xxx"
+consumer_secret = "xxx"
 
 
 
